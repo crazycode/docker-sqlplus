@@ -22,7 +22,8 @@ RUN alien -i oracle-instantclient11.2-sqlplus-11.2.0.4.0-1.x86_64.rpm
 
 RUN rm *.rpm
 
-RUN echo "export LD_LIBRARY_PATH=/usr/lib/oracle/11.2/client64/lib" >> ~/.bashrc
-RUN echo "export PATH=$PATH:/usr/lib/oracle/11.2/client64/bin" >> ~/.bashrc
+ENV LD_LIBRARY_PATH /usr/lib/oracle/11.2/client64/lib
+ENV ORACLE_HOME /usr/lib/oracle/11.2/client64
+ENV PATH $ORACLE_HOME/bin:$PATH
 
-CMD source /.bashrc; echo "sqlplus $CSTR"; rlwrap sqlplus $CSTR
+CMD echo "sqlplus $CSTR"; rlwrap sqlplus $CSTR

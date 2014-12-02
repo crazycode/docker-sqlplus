@@ -28,8 +28,8 @@ From the top level directory of this repo:
 Example run:
 ------------
 ```bash
-./sqlplus username/password@db.mydomain.com:1521/SOMESCHEMA
-sqlplus username/password@db.mydomain.com:1521/SOMESCHEMA
+./sqlplus demo/demo@192.168.59.3:1521/XE
+sqlplus demo/demo@192.168.59.3:1521/XE
 
 SQL*Plus: Release 11.2.0.4.0 Production on Sat Mar 8 15:51:59 2014
 
