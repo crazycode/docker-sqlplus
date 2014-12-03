@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -t -i -e CSTR="$1" sqlplus
+docker run -t -i -e CSTR="$1" crazycode/sqlplus
